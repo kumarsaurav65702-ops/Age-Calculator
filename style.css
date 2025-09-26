@@ -1,0 +1,175 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #a90303, #90bafc);
+            color: #fff;
+            padding: 20px; /* Increased padding for better spacing on mobile */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+        }
+
+        .calculator {
+            width: 100%;
+            max-width: 600px;
+            /* Remove fixed margins and let flexbox handle centering */
+            margin: 0 auto; /* Center the calculator horizontally */
+            padding: 20px; /* Add padding for better spacing on mobile */
+        }
+
+        .calculator h1 {
+            font-size: 60px;
+            text-align: center; /* Center the heading */
+            margin-bottom: 20px; /* Add spacing below heading */
+            line-height: 1.2; /* Improve readability on small screens */
+        }
+
+        .calculator h1 span {
+            color: #ffff76;
+        }
+
+        .input-box {
+            margin: 40px 0;
+            padding: 35px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap; /* Allow elements to wrap on small screens */
+            gap: 15px; /* Add consistent gap between elements */
+        }
+
+        .input-box input {
+            flex: 1;
+            min-width: 200px; /* Prevent input from becoming too small */
+            margin-right: 0; /* Remove fixed margin, use gap instead */
+            padding: 14px 20px;
+            border: 0;
+            outline: 0;
+            font-size: 18px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .input-box button {
+            background: #ffff76;
+            border: 0;
+            outline: 0;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 500;
+            color: #333;
+            cursor: pointer;
+            white-space: nowrap; /* Prevent button text from wrapping */
+        }
+
+        .input-box input::-webkit-calendar-picker-indicator {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: auto;
+            width: auto;
+            position: absolute;
+            background-position: calc(100% - 10px);
+            background-size: 30px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: 20px;
+            text-align: center; /* Center the result text */
+            margin-top: 20px; /* Add spacing above result */
+            line-height: 1.5; /* Improve readability */
+            padding: 0 10px; /* Add padding on small screens */
+        }
+
+        #result span {
+            color: #ffff76;
+            font-weight: 600; /* Make result stand out */
+        }
+
+        /* Media Queries for Responsiveness */
+
+        /* Tablets and smaller desktops */
+        @media screen and (max-width: 768px) {
+            .calculator h1 {
+                font-size: 48px; /* Reduce heading size */
+            }
+            
+            .input-box {
+                padding: 25px; /* Reduce padding */
+                margin: 30px 0; /* Adjust margins */
+            }
+            
+            .input-box input, .input-box button {
+                padding: 12px 15px; /* Adjust padding */
+                font-size: 16px; /* Slightly smaller font */
+            }
+        }
+
+        /* Mobile phones */
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 15px; /* Reduce container padding */
+            }
+            
+            .calculator {
+                padding: 10px; /* Reduce calculator padding */
+            }
+            
+            .calculator h1 {
+                font-size: 36px; /* Further reduce heading size */
+            }
+            
+            .input-box {
+                padding: 20px; /* Further reduce padding */
+                margin: 20px 0; /* Adjust margins */
+                flex-direction: column; /* Stack elements vertically */
+            }
+            
+            .input-box input {
+                width: 100%; /* Full width input */
+                min-width: auto; /* Remove min-width restriction */
+                margin-bottom: 15px; /* Add spacing below input */
+            }
+            
+            .input-box button {
+                width: 100%; /* Full width button */
+                padding: 12px; /* Adjust padding */
+            }
+            
+            #result {
+                font-size: 18px; /* Slightly smaller result text */
+            }
+        }
+
+        /* Very small mobile devices */
+        @media screen and (max-width: 320px) {
+            .calculator h1 {
+                font-size: 30px; /* Further reduce heading size */
+            }
+            
+            .input-box {
+                padding: 15px; /* Further reduce padding */
+            }
+            
+            .input-box input, .input-box button {
+                padding: 10px 12px; /* Further adjust padding */
+                font-size: 14px; /* Smaller font size */
+            }
+            
+            #result {
+                font-size: 16px; /* Smaller result text */
+            }
+        }
+   
